@@ -1,0 +1,17 @@
+body{
+	width:90%;
+	margin:0px auto;
+}
+
+#loginDiv form{
+	margin-left:20px;
+}
+
+
+#modifyForm{
+	margin:0px 20px;
+	
+}
+
+
+#modifyForm p input{width:160px;}
