@@ -21,5 +21,11 @@ public class ListServiceImpl implements ListService {
 		
 		return listMapper.findPN();
 	}
+
+	@Override
+	public Picname listAPN(Integer phid) {
+		
+		return listMapper.findAPN(phid);
+	}
 	
 }

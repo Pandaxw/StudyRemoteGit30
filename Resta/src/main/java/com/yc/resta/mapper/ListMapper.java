@@ -6,4 +6,7 @@ import com.yc.resta.entity.Picname;
 
 public interface ListMapper {
 	public List<Picname> findPN();
+	
+	public Picname findAPN(Integer phid);
+
 }

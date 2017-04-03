@@ -2,9 +2,13 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 映射文件的命名空间 namespace的值是，与这对应的映射接口的全类名 -->
 <mapper namespace="com.yc.resta.mapper.UserMapper">
-	<select id="loginUser" parameterType="Users" resultType="Users">
-		select * from users where uname =#{uname} and upassword=#{upassword}
+	<select id="findUser" parameterType="Users" resultType="Users">
+		select * from useres where u_id=#{u_id} and upwd=#{upwd}
 	</select>
+	
+	<insert id="addUser" parameterType="Users" >
+		insert into useres(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimg) 
+		values(seq_u_id.nextval,#{uname},#{upwd},#{umail},#{unickname},#{uphone},#{usex},#{uaddr},#{uheadimg})
+	</insert>
 </mapper>

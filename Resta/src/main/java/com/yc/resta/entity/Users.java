@@ -2,39 +2,44 @@ package com.yc.resta.entity;
 
 
 public class Users {
+	private Integer uid;
 	private String uname;
-	private String upassword;
-	private String usex;
-	private String uage;
+	private String upwd;
+	private String umail;
+	private String unickname;
 	private String uphone;
-	private String uemail;
+	private String usex;
 	private String uaddr;
-	private String headimage;
-	
-	
+	private String uheadimage;
+	public Integer getUid() {
+		return uid;
+	}
+	public void setUid(Integer uid) {
+		this.uid = uid;
+	}
 	public String getUname() {
 		return uname;
 	}
 	public void setUname(String uname) {
 		this.uname = uname;
 	}
-	public String getUpassword() {
-		return upassword;
+	public String getUpwd() {
+		return upwd;
 	}
-	public void setUpassword(String upassword) {
-		this.upassword = upassword;
+	public void setUpwd(String upwd) {
+		this.upwd = upwd;
 	}
-	public String getUsex() {
-		return usex;
+	public String getUmail() {
+		return umail;
 	}
-	public void setUsex(String usex) {
-		this.usex = usex;
+	public void setUmail(String umail) {
+		this.umail = umail;
 	}
-	public String getUage() {
-		return uage;
+	public String getUnickname() {
+		return unickname;
 	}
-	public void setUage(String uage) {
-		this.uage = uage;
+	public void setUnickname(String unickname) {
+		this.unickname = unickname;
 	}
 	public String getUphone() {
 		return uphone;
@@ -42,11 +47,11 @@ public class Users {
 	public void setUphone(String uphone) {
 		this.uphone = uphone;
 	}
-	public String getUemail() {
-		return uemail;
+	public String getUsex() {
+		return usex;
 	}
-	public void setUemail(String uemail) {
-		this.uemail = uemail;
+	public void setUsex(String usex) {
+		this.usex = usex;
 	}
 	public String getUaddr() {
 		return uaddr;
@@ -54,18 +59,20 @@ public class Users {
 	public void setUaddr(String uaddr) {
 		this.uaddr = uaddr;
 	}
-	public String getHeadimage() {
-		return headimage;
+	public String getUheadimage() {
+		return uheadimage;
 	}
-	public void setHeadimage(String headimage) {
-		this.headimage = headimage;
+	public void setUheadimage(String uheadimage) {
+		this.uheadimage = uheadimage;
 	}
-	
 	@Override
 	public String toString() {
-		return "Users [uname=" + uname + ", upassword=" + upassword + ", usex=" + usex + ", uage=" + uage + ", uphone="
-				+ uphone + ", uemail=" + uemail + ", uaddr=" + uaddr + ", headimage=" + headimage + "]";
+		return "Users [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + ", umail=" + umail + ", unickname="
+				+ unickname + ", uphone=" + uphone + ", usex=" + usex + ", uaddr=" + uaddr + ", uheadimage="
+				+ uheadimage + "]";
 	}
+	
+
 	
 
 	

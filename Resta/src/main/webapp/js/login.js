@@ -6,9 +6,14 @@ $("#loginDiv").dialog({
 	top:80
 });
 
+$("#loginForm p img").click(function(){
+	$(this).attr("src","vcode.jpg?" + new Date().getTime())
+});
+
 $('#btnLogin').linkbutton({    
     iconCls: 'icon-man',
     onClick: function(){
-    	$("#loginForm").submit(); //表单提交    --普通提交    ；  如果需要区域提交 ，用异步提交
+    	$("#loginForm").submit();//表单提交
     }
-});  
+}); 
+

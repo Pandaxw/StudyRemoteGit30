@@ -1,8 +1,6 @@
 //异步加载美食图片以及名称
 function listPicName(){
-	alert("1");
-	$.get("gallery/picname",function(data){
-		//alert(data+"==>"+JSON.stringify(data));
+	$.post("gallery/picname",function(data){
 		//$("#indesNewsInfo").empty();
 
 		var PicnameStr = "";
@@ -11,10 +9,10 @@ function listPicName(){
 			PicnameStr+=
 				'<div class="col-md-4 col-sm-6 col-xs-12">'
 				+'<div class="single-gallery-img mb-30">'
-				+'<a href="images/gallery/gallery-2/'+data.phimg+'">'
-				+'<img src="images/gallery/gallery-2/'+data.phimg+'" alt="">'
+				+'<a href="images/gallery/gallery-2/'+data[i].phimg+'">'
+				+'<img src="images/gallery/gallery-2/'+data[i].phimg+'" alt="">'
 				+'<div class="single-gallery-hover">'
-				/*+'<span><i class="fa fa-search-plus">'+data.phname+'</i></span>'*/
+				+'<span><i class="fa fa-search-plus">'+data[i].phname+'</i></span>'
 				+'</div>'
 				+'</a>'
 				+'</div>'  
@@ -22,7 +20,6 @@ function listPicName(){
 		}
 
 		$("#picname")[0].innerHTML = PicnameStr;
-		alert(PicnameStr);
 	}, "json");
 }
 listPicName();
