@@ -1,11 +1,12 @@
 drop table users;
+drop sequence seq_uid
 --用户表 (注册用)
 create table users(
-	uid int primary key,
-	uname varchar2(50),	--姓名
-	upwd varchar2(50),	--密码
+	u_id int primary key,
+	uname varchar2(50) not null,	--姓名
+	upwd varchar2(50) not null,	--密码
 	umail varchar2(50),	--邮箱
-	unickname varchar2(50),  --昵称
+	unickname varchar2(50),  --昵称-
 	uphone varchar2(50),	--手机
 	usex varchar2(2) check(usex in('男','女')),	--性别
 	uaddr varchar2(50),	--地址
@@ -16,8 +17,7 @@ create sequence seq_u_id
 start with 100001 
 increment by 1 ;
 
-insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimage) 
-values(seq_u_id.nextval,'张三','a','592176245@qq.com','小张','18397362360','男','衡阳','');
+insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimage) values(seq_u_id.nextval,'李四','6f9b0a55df8ac28564cb9f63a10be8af6ab3f7c2','592176245@qq.com','小李','18397152360','男','衡阳','');
 --管理员表
 create table administrator(
 	aid int primary key,
@@ -109,3 +109,5 @@ create table personinfo(
 	pfopid int references opinion(opid),	--发表的意见
 	mark varchar2(50)
 )
+
+select * from users 

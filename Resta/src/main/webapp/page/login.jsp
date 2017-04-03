@@ -18,7 +18,7 @@
 				<label style="color: red">${errorMsg}&nbsp;</label>
 			</p>
 			<p>
-				<input name="uid" type="text" placeholder="输入用户编号" required="required"
+				<input name="u_id" type="text" placeholder="输入用户编号" required="required"
 					value="" />
 			</p>
 			<p>

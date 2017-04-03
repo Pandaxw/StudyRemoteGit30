@@ -31,7 +31,7 @@ public class UserHandler {
 		}else{
 			request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
 			System.out.println(user.getUheadimage());
-			return "redirect:/page/index.jsp";
+			return "redirect:../index.html";
 		}
 	}
 	
@@ -44,7 +44,7 @@ public class UserHandler {
 			return "/page/register.jsp";
 		}else{
 			request.getSession().setAttribute(ServletUtil.REGISTER_USER, user);
-			return "redirect:/page/index.jsp";
+			return "redirect:../index.html";
 		}
 	}
 }

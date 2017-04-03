@@ -2,7 +2,7 @@ package com.yc.resta.entity;
 
 
 public class Users {
-	private Integer uid;
+	private Integer u_id;
 	private String uname;
 	private String upwd;
 	private String umail;
@@ -11,11 +11,11 @@ public class Users {
 	private String usex;
 	private String uaddr;
 	private String uheadimage;
-	public Integer getUid() {
-		return uid;
+	public Integer getU_id() {
+		return u_id;
 	}
-	public void setUid(Integer uid) {
-		this.uid = uid;
+	public void setU_id(Integer u_id) {
+		this.u_id = u_id;
 	}
 	public String getUname() {
 		return uname;
@@ -67,7 +67,7 @@ public class Users {
 	}
 	@Override
 	public String toString() {
-		return "Users [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + ", umail=" + umail + ", unickname="
+		return "Users [u_id=" + u_id + ", uname=" + uname + ", upwd=" + upwd + ", umail=" + umail + ", unickname="
 				+ unickname + ", uphone=" + uphone + ", usex=" + usex + ", uaddr=" + uaddr + ", uheadimage="
 				+ uheadimage + "]";
 	}
