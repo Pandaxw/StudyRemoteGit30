@@ -17,7 +17,7 @@
 				<label> 美食菜名 </label> <input id="phname" name="phname"/>
 			</p>
 
-			<p>美食图片:<input id="phimg" type="file" name="phimg" onchange="chgPic(this)"/><br>
+			<p>美食图片:<input id="phimg" type="file" name="picData" onchange="chgPic(this)"/><br>
 				<img src="images/not_pic.jpg" id="pic" width="150" height="100">
 			</p>
 			 <input type="submit" value="修改" id="modifyBtn" />

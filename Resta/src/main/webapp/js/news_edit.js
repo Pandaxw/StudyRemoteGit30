@@ -28,13 +28,13 @@ $('#newsEdit').datagrid({
 	      			if(value == null){
 	      				return "<img width='150' src='images/not_pic.jpg'/>"
 	      			}else{
-	      				return "<img width='150' src='images/gallery/gallery-2/" + value + "'/>"
+	      				return "<img width='150' src='" + value + "'/>"
 	      			}
 	        	  }},
 	          { field: 'operator', title: '操作', width: 120,align:'center',
 	        	  formatter: function(value,row,index){
 	        		  return '<a class="editBtn" href="javascript:void(0);" onclick="showDetail('+index+')">修改</a>'+
-	        		  '<a class="delBtn" href="javascript:void(0);" onclick="showDetail('+index+')">删除</a>'+
+	        		  '<a class="delBtn" href="javascript:void(0);" onclick="deletePN('+row.phid+')">删除</a>'+
 	        		  '<script>$(".editBtn").linkbutton({iconCls: "icon-ok"});$(".delBtn").linkbutton({iconCls: "icon-cancel"}); </script>'; 
 	        	  }
 	          },      
@@ -49,42 +49,36 @@ $('#newModify').dialog({
 	closed:true,
 
 });
-
+//删除
+function deletePN(phid){
+	$.post("gallery/"+phid,function(data){
+			if(data.trim() == "true"){
+				$.messager.alert('删除美食','修改美食成功！！！','yes');
+			}else{
+				$.messager.alert('删除美食','修改美食失败！！！','error');
+			}
+		},"json");
+}
+//修改
 function showDetail(index){
 	$('#newModify').dialog("open");
-
-		//alert(data+'==>'+ JSON.stringify(data));
-
-		/*$.post("topic/all",function(datat){
-			//alert(data+'==>'+JSON.stringify(data));
-			$("#phid").empty();
-			for(var i=0;i<datat.length;i++){
-				if(data.topic.tname==datat[i].tname){
-					$("#phid").append("<option value='"+datat[i].tid+" selected'>"+datat[i].tname+"</option>");
-				}else{
-					$("#ntid").append("<option value='"+datat[i].tid+"'>"+datat[i].tname+"</option>");
-				}
-
-			}
-
-		},"json");*/
+	
 		var row = $("#newsEdit").datagrid("getRows")[index];
 		$("#phid").val(row.phid);
 		$("#phname").val(row.phname);
 		//contentEditor.setContent(data.ncontent);
 	
 		if(row.phimg){
-			$("#pic").attr("src", "<img width='150' src='images/gallery/gallery-2/" + value + "'/>");
+			$("#pic").attr("src", value);
 		}else{
 			$("#pic").attr("src", "images/not_pic.jpg");
 		}
 }
-
+//修改
 $("#modifyForm").form({
 	url:'gallery/modify',
 	success:function(data){
 		if(data.trim() == "true"){
-			alert(data);
 			$('#newModify').dialog("close");
 			$('#newsEdit').datagrid("reload");
 			$.messager.alert('修改美食信息','修改美食信息成功！！！','yes');
@@ -93,6 +87,26 @@ $("#modifyForm").form({
 		}
 	}
 });
+
+//增加
+function showAddDetail(){
+	$('#cateAdd').dialog("open");
+}
+
+//增加
+$("#AddForm").form({
+	url:'gallery/add',
+	success:function(data){
+		if(data.trim() == "true"){
+			$('#cateAdd').dialog("close");
+			$('#cateAdd').datagrid("reload");
+			$.messager.alert('添加美食信息','添加美食信息成功！！！','yes');
+		}else{
+			$.messager.alert('添加美食信息','添加美食信息失败！！！','error');
+		}
+	}
+});
+
 /*$("input#modifyBtn").click(function(){
 	$("#ncontent").val(contentEditor.getContent());
 	alert(contentEditor.getContent());

@@ -9,8 +9,8 @@ function listPicName(){
 			PicnameStr+=
 				'<div class="col-md-4 col-sm-6 col-xs-12">'
 				+'<div class="single-gallery-img mb-30">'
-				+'<a href="images/gallery/gallery-2/'+data[i].phimg+'">'
-				+'<img src="images/gallery/gallery-2/'+data[i].phimg+'" alt="">'
+				+'<a href="'+data[i].phimg+'">'
+				+'<img src="'+data[i].phimg+'" alt="">'
 				+'<div class="single-gallery-hover">'
 				+'<span><i class="fa fa-search-plus">'+data[i].phname+'</i></span>'
 				+'</div>'

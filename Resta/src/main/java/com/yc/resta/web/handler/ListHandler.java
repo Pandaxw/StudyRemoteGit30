@@ -2,6 +2,7 @@ package com.yc.resta.web.handler;
 
 import java.io.IOException;
 
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +33,8 @@ public class ListHandler {
 	}
 		@Autowired
 		private ListService listService;
-	
+		
+		
 		@RequestMapping(value="picname",method=RequestMethod.POST)
 		@ResponseBody
 		public List<Picname> listPicname(){
@@ -40,17 +42,20 @@ public class ListHandler {
 			return listService.listPN();
 		}
 		
+		
+		//删除
 		@RequestMapping(value="/{phid}",method=RequestMethod.POST)
 		@ResponseBody
-		public Picname listAPicname(@PathVariable("phid")Integer phid){
-			System.out.println(listService.listPN());
-			return listService.listAPN(phid);
+		public boolean deleteAPicname(@PathVariable("phid")Integer phid){
+			System.out.println(phid);
+			return listService.deleteAPN(phid);
 		}
 		
+		//修改
 		@RequestMapping("modify")
 		@ResponseBody//转换成json格式
-		public void modify(@RequestParam("picname")Picname picname){
-			/*String picPath=null;
+		public boolean modify(@RequestParam("picData")MultipartFile picData,Picname picname){
+			String picPath=null;
 			if(picData !=null && !picData.isEmpty()){ //注意顺序 ;判断是否有文件上传
 				try {
 					picData.transferTo(ServletUtil.getUploadFile(picData.getOriginalFilename()));
@@ -59,10 +64,31 @@ public class ListHandler {
 					e.printStackTrace();
 				}
 			}	
-				picname.setPhimg(picPath);*/
-				System.out.println("上传图片==》picname"+picname);
-				/*return listService.modifyUser(picname);*/
+				picname.setPhimg(picPath);
+				System.out.println("上传图片==》"+picname);
+				return listService.modifyPic(picname);
 			
 		}
-
+		
+				//增加
+				@RequestMapping("insert")
+				@ResponseBody//转换成json格式
+				public boolean insert(@RequestParam("picDataAdd")MultipartFile picDataAdd,Picname picname){
+					String picPath=null;
+					if(picDataAdd !=null && !picDataAdd.isEmpty()){ //注意顺序 ;判断是否有文件上传
+						try {
+							picDataAdd.transferTo(ServletUtil.getUploadFile(picDataAdd.getOriginalFilename()));
+							picPath=ServletUtil.VIRTUAL_UPLOAD+picDataAdd.getOriginalFilename();
+						} catch (IllegalStateException | IOException e) {
+							e.printStackTrace();
+						}
+					}	
+						picname.setPhimg(picPath);
+						System.out.println("上传图片==》"+picname);
+						return listService.insertPic(picname);
+					
+				}
+		
+		
+		
 }

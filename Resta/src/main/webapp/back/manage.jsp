@@ -16,7 +16,7 @@
 	<div data-options="region:'north'" style="height: 138px;">
 		<div id="header">
 			<div id="top_login">
-				<label> 欢迎您,BOSS【<span>${loginUser.uname}</span>】!
+				<label> 欢迎您,BOSS【   <span>${loginUser.uname}</span>   】!
 				
 			</div>
 			<div id="nav">
@@ -65,7 +65,7 @@
 				<ul class="treeNav">
 					<li><span>美食信息</span></li>
 					<li><span>美食编辑</span></li>
-					<li><span></span></li>
+					<li><span>美食添加</span></li>
 				</ul>
 			</div>
 			<div title="主题管理" data-options="iconCls:'icon-mini-add'">

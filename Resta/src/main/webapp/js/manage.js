@@ -15,7 +15,7 @@ $(".treeNav").tree({
 		if(nodeContent=="美食信息"){
 			$("#main").tabs('add',{
 				title:nodeContent,
-				href:"back/news_info.jsp",
+				href:"back/cate_info.jsp",
 				iconCls:"icon-mini-add",
 				closeable:true,
 			});
@@ -26,10 +26,10 @@ $(".treeNav").tree({
 				iconCls:"icon-mini-add",
 				closeable:true,
 			});
-		}else{
+		}else if(nodeContent=="美食添加"){
 			$("#main").tabs('add',{
 				title:nodeContent,
-				content:nodeContent,
+				href:"back/cate_add.jsp",
 				iconCls:"icon-mini-add",
 				closeable:true,
 			});

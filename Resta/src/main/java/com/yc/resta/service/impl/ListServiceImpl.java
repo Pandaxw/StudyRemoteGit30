@@ -23,9 +23,20 @@ public class ListServiceImpl implements ListService {
 	}
 
 	@Override
-	public Picname listAPN(Integer phid) {
+	public boolean deleteAPN(Integer phid) {
 		
-		return listMapper.findAPN(phid);
+		return listMapper.findAPN(phid)>0;
+	}
+
+	@Override
+	public boolean modifyPic(Picname picname) {
+		return listMapper.updataPic(picname)>0;
+	}
+
+	@Override
+	public boolean insertPic(Picname picname) {
+		
+		return listMapper.insertPic(picname)>0;
 	}
 	
 }
