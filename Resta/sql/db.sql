@@ -48,14 +48,26 @@ create table orderdetails(
 
 
 --菜系表
+drop table greens;
 create table greens(
 	gid int primary key,
+	gtype varchar2(30),		--菜类
 	gprice number(10,2),	--单价
 	gimg varchar2(50),	--图片
 	gname varchar2(50),	--菜名
-	gcontent varchar2(50),  --菜的介绍
+	gintro varchar2(50),  --菜的介绍
 	mark varchar2(50)
 )
+select * from greens where gtype = all 
+create sequence seq_greens start with 10;
+insert into greens(gid,gtype,gprice,gimg,gname,gintro) values(seq_greens.nextval,'coffee',10,'ai.png','爱心咖啡','真的超级好喝！')
+insert into greens(gid,gtype,gprice,gimg,gname,gintro) values(seq_greens.nextval,'breakfast',25.5,'niu.png','牛角面包套餐','美味！');
+insert into greens(gid,gtype,gprice,gimg,gname,gintro) values(seq_greens.nextval,'drink',10.5,'xue.jpg','血腥毒药','冰爽！');
+insert into greens(gid,gtype,gprice,gimg,gname,gintro) values(seq_greens.nextval,'lunch',30,'ji.jpg','鸡肉混搭','好吃！！');
+insert into greens(gid,gtype,gprice,gimg,gname,gintro) values(seq_greens.nextval,'dinner',30.5,'hi.jpg','海鲜拼盘','美味！');
+
+
+select * from greens
 
 --意见表
 create table opinion(
@@ -74,6 +86,7 @@ create table person(
 	pcontent varchar2(50),	--详细介绍
 	mark varchar2(50)
 )
+
 
 --美食天地图片(修改)
 create table picname(

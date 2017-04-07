@@ -54,14 +54,14 @@ function showDetail(index){
 	$('#cateKnow').dialog("open");
 	
 		var row = $("#cateKnow").datagrid("getRows")[index];
-		$("#phid").val(row.phid);
-		$("#phname").val(row.phname);
+		$("#ph_id").val(row.phid);
+		$("#ph_name").val(row.phname);
 		//contentEditor.setContent(data.ncontent);
 	
 		if(row.phimg){
-			$("#phimg").attr("src", value);
+			$("#ph_img").attr("src", row.phimg);
 		}else{
-			$("#phimg").attr("src", "images/not_pic.jpg");
+			$("#ph_img").attr("src", "images/not_pic.jpg");
 		}
 }
 

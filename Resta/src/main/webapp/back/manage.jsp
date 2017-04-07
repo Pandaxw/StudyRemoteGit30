@@ -52,11 +52,10 @@
 	<div data-options="region:'west',title:'导航栏', collapsible:false"
 		style="width: 160px;">
 		<div id="Newsnav">
-			<div title="用户管理" data-options="iconCls:'icon-mini-add'">
+			<div title="菜单管理" data-options="iconCls:'icon-mini-add'">
 				<ul class="treeNav">
-					<li><span>用户信息</span></li>
-					<li><span>用户编辑</span></li>
-					<li><span>用户管理</span></li>
+					<li><span>菜单编辑</span></li>
+					<li><span>新增菜样</span></li>
 				</ul>
 
 

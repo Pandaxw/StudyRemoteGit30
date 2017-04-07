@@ -13,7 +13,7 @@
 
 //增加
 $("#insertForm").form({
-	url:'gallery/insert',
+	url:'greens/insert',
 	success:function(data){
 		if(data.trim() == "true"){
 			

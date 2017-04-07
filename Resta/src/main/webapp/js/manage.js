@@ -17,24 +17,37 @@ $(".treeNav").tree({
 				title:nodeContent,
 				href:"back/cate_info.jsp",
 				iconCls:"icon-mini-add",
-				closeable:true,
+				closable:true,
 			});
 		}else if(nodeContent=="美食编辑"){
 			$("#main").tabs('add',{
 				title:nodeContent,
-				href:"back/news_edit.jsp",
+				href:"back/cate_edit.jsp",
 				iconCls:"icon-mini-add",
-				closeable:true,
+				closable:true,
 			});
 		}else if(nodeContent=="美食添加"){
 			$("#main").tabs('add',{
 				title:nodeContent,
 				href:"back/cate_add.jsp",
 				iconCls:"icon-mini-add",
-				closeable:true,
+				closable:true,
+			});
+		}else if(nodeContent=="菜单编辑"){
+			$("#main").tabs('add',{
+				title:nodeContent,
+				href:"back/green_edit.jsp",
+				iconCls:"icon-mini-add",
+				closable:true,
+			});
+		}else if(nodeContent=="新增菜样"){
+			$("#main").tabs('add',{
+				title:nodeContent,
+				href:"back/green_add.jsp",
+				iconCls:"icon-mini-add",
+				closable:true,
 			});
 		}
-
 	}
 });
 $.extend($.fn.layout.methods,{
