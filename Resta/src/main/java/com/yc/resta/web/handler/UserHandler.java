@@ -1,5 +1,6 @@
 package com.yc.resta.web.handler;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +10,12 @@ import com.yc.resta.entity.Users;
 import com.yc.resta.service.UserService;
 import com.yc.resta.util.ServletUtil;
 
-
-
 @Controller("userHandler")
 @RequestMapping("user")
 public class UserHandler {
 	
 	public UserHandler(){
-		System.out.println("************UserHandler()**************");
+		System.out.println("--------------UserHandler()------------------");
 	}
 		@Autowired
 		private UserService userService;
@@ -46,5 +45,4 @@ public class UserHandler {
 				return "redirect:/page/index.jsp";
 			}
 		}
-
 }

@@ -2,30 +2,31 @@ package com.yc.resta.entity;
 
 
 public class Users {
-	public Integer u_id;
+	private Integer u_id;
 	private String uname;
 	private String upwd;
-	private String usex;
 	private String uage;
+	private String umail;
+	private String unickname;
 	private String uphone;
-	private String uemail;
+	private String usex;
 	private String uaddr;
-	private String headimage;
+	private String uheadimage;
 	
 	public Users() {
 	}
 	
-	public Users(Integer u_id, String uname, String upwd, String usex, String uage, String uphone, String uemail,
-			String uaddr, String headimage) {
+	public Users(Integer u_id, String uname, String upwd, String usex, String uage, String uphone, String umail,
+			String uaddr, String uheadimage) {
 		this.u_id = u_id;
 		this.uname = uname;
 		this.upwd = upwd;
 		this.usex = usex;
 		this.uage = uage;
 		this.uphone = uphone;
-		this.uemail = uemail;
+		this.umail = umail;
 		this.uaddr = uaddr;
-		this.headimage = headimage;
+		this.uheadimage =uheadimage;
 	}
 
 	public Integer getU_id() {
@@ -46,17 +47,17 @@ public class Users {
 	public void setUpwd(String upwd) {
 		this.upwd = upwd;
 	}
-	public String getUsex() {
-		return usex;
+	public String getUmail() {
+		return umail;
 	}
-	public void setUsex(String usex) {
-		this.usex = usex;
+	public void setUmail(String umail) {
+		this.umail = umail;
 	}
-	public String getUage() {
-		return uage;
+	public String getUnickname() {
+		return unickname;
 	}
-	public void setUage(String uage) {
-		this.uage = uage;
+	public void setUnickname(String unickname) {
+		this.unickname = unickname;
 	}
 	public String getUphone() {
 		return uphone;
@@ -64,11 +65,11 @@ public class Users {
 	public void setUphone(String uphone) {
 		this.uphone = uphone;
 	}
-	public String getUemail() {
-		return uemail;
+	public String getUsex() {
+		return usex;
 	}
-	public void setUemail(String uemail) {
-		this.uemail = uemail;
+	public void setUsex(String usex) {
+		this.usex = usex;
 	}
 	public String getUaddr() {
 		return uaddr;
@@ -76,17 +77,17 @@ public class Users {
 	public void setUaddr(String uaddr) {
 		this.uaddr = uaddr;
 	}
-	public String getHeadimage() {
-		return headimage;
+	public String getUheadimage() {
+		return uheadimage;
 	}
-	public void setHeadimage(String headimage) {
-		this.headimage = headimage;
+	public void setUheadimage(String uheadimage) {
+		this.uheadimage = uheadimage;
 	}
-	
 	@Override
 	public String toString() {
 		return "Users [u_id=" + u_id + ", uname=" + uname + ", upwd=" + upwd + ", usex=" + usex + ", uage="
-				+ uage + ", uphone=" + uphone + ", uemail=" + uemail + ", uaddr=" + uaddr + ", headimage=" + headimage
+				+ uage + ", uphone=" + uphone + ", uemail=" + umail + ", uaddr=" + uaddr + ", uheadimage=" + uheadimage
 				+ "]";
+
 	}
 }

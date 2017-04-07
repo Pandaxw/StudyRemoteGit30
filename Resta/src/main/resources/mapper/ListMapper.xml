@@ -7,4 +7,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findPN" resultType="Picname">
 		select * from picname
 	</select>
+	
+	<delete id="findAPN" parameterType="Integer">
+		delete from picname where phid=#{phid}
+	</delete>
+	
+	<update id="updataPic" parameterType="Picname">
+		update picname set phname=#{phname},phimg=#{phimg} where phid=#{phid}
+	</update>
+	
+	<insert id="insertPic" parameterType="Picname">
+		insert into picname values(seq_picname.nextval,#{phname},#{phimg},'')
+	</insert>
 </mapper>
