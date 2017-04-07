@@ -1,7 +1,5 @@
 package com.yc.resta.entity;
 
-import java.io.Serializable;
-
 import org.springframework.stereotype.Service;
 
 @Service("greens")
@@ -11,7 +9,13 @@ public class Greens{
 	private String gtype;
 	private String gprice;
 	
-
+	public Greens() {
+		
+	}
+	
+	public Greens(Integer gid) {
+		this.gid = gid;
+	}
 	public Integer getGid() {
 		return gid;
 	}
@@ -64,8 +68,7 @@ public class Greens{
 	private String gname;
 	private String gintro;
 	
-	public Greens() {
-	}
+	
 
 	@Override
 	public String toString() {

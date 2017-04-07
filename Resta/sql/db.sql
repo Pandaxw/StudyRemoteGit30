@@ -26,21 +26,23 @@ create table administrator(
 	mark varchar2(50)
 )
 
---订单详情表(购物车里显示)
-create table orders(
-	oid int primary key,
-	ou_id int references useres(u_id), --下订单的人
-	ogid int references greens(gid),   --订的菜
-	onum number,	--数量
-	odate varchar2(50),	--下订单的时间
-	onotes varchar2(50),	--备注
+--购物车表(购物车里显示)
+drop table buyCar;
+create table buyCar(
+	bid int primary key,
+	bgid int references greens(gid),   --订的菜
+	bonum number,	--数量
 	mark varchar2(50)
 )
+create sequence seq_buyCar
+start with 100 
+increment by 1;
 
 --订单表(用户个人信息查看)
 create table orderdetails(
 	odid int primary key,
-	odoid int references orders(oid), 
+	odoid int references orders(oid),
+	ou_id int references useres(u_id), --下订单的人
 	odstate int,		--订单状态   1代表正在配送  2代表还没接单
 	mark varchar2(50)
 )
