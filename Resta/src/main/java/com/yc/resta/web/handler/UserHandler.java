@@ -37,14 +37,13 @@ public class UserHandler {
 		
 		@RequestMapping("register")
 		public String register(Users user,HttpServletRequest request){
-			//System.out.println("请求对象user==>"+user);
-			user=userService.register(user);
-			if(user == null){
+			boolean jugle=userService.register(user);
+			if(!jugle){
 				request.setAttribute(ServletUtil.ERROR_MESSAGE,"注册失败!!!!");
-				return "/register.jsp";
+				return "/page/register.jsp";
 			}else{
 				request.getSession().setAttribute(ServletUtil.REGISTER_USER, user);
-				return "redirect:/index.jsp";
+				return "redirect:/page/index.jsp";
 			}
 		}
 

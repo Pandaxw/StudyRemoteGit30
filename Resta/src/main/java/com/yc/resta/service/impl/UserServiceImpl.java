@@ -20,9 +20,9 @@ public class UserServiceImpl implements UserService {
 		return userMapper.loginUser(user);
 	}
 	@Override
-	public Users register(Users user) {
+	public boolean register(Users user) {
 		LogManager.getLogger().debug("用户进行注册操作===>"+user);
-		return userMapper.addUser(user);
+		return userMapper.addUser(user)>0;
 	}
 	
 }
