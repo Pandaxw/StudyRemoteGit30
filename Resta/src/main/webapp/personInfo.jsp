@@ -28,7 +28,7 @@
 			<td><a>地   址:</a>${loginUser.uaddr }</td>
 		</tr>
 		<tr>
-			<td><a>用户图像:<img src="images/${loginUser.uheadimg }" width="80" height="50"></a></td>
+			<td><a>用户图像:<img src="images/${loginUser.uheadimage }" width="80" height="50"></a></td>
 		</tr>
 		<tr>
 			<td><a href="index.jsp">返回</a></td>

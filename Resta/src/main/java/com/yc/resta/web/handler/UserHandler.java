@@ -39,10 +39,10 @@ public class UserHandler {
 			boolean jugle=userService.register(user);
 			if(!jugle){
 				request.setAttribute(ServletUtil.ERROR_MESSAGE,"注册失败!!!!");
-				return "/page/register.jsp";
+				return "/register.jsp";
 			}else{
 				request.getSession().setAttribute(ServletUtil.REGISTER_USER, user);
-				return "redirect:/page/index.jsp";
+				return "redirect:/index.jsp";
 			}
 		}
 }

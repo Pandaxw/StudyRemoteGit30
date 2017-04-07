@@ -49,7 +49,7 @@
 					required="required" value="" />
 			</p>
 			<p>
-				<a>用户图像:</a><input id="upicPath" type="file" name="uheadimg"
+				<a>用户图像:</a><input id="upicPath" type="file" name="uheadimage"
 					onchange="chgPic(this)" multiple="multiple" /><br> <img
 					src="images/tubiao.jpg" id="pic" width="100" height="100">
 			</p>
