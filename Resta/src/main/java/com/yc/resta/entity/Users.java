@@ -2,8 +2,9 @@ package com.yc.resta.entity;
 
 
 public class Users {
+	public Integer u_id;
 	private String uname;
-	private String upassword;
+	private String upwd;
 	private String usex;
 	private String uage;
 	private String uphone;
@@ -11,18 +12,39 @@ public class Users {
 	private String uaddr;
 	private String headimage;
 	
+	public Users() {
+	}
 	
+	public Users(Integer u_id, String uname, String upwd, String usex, String uage, String uphone, String uemail,
+			String uaddr, String headimage) {
+		this.u_id = u_id;
+		this.uname = uname;
+		this.upwd = upwd;
+		this.usex = usex;
+		this.uage = uage;
+		this.uphone = uphone;
+		this.uemail = uemail;
+		this.uaddr = uaddr;
+		this.headimage = headimage;
+	}
+
+	public Integer getU_id() {
+		return u_id;
+	}
+	public void setU_id(Integer u_id) {
+		this.u_id = u_id;
+	}
 	public String getUname() {
 		return uname;
 	}
 	public void setUname(String uname) {
 		this.uname = uname;
 	}
-	public String getUpassword() {
-		return upassword;
+	public String getUpwd() {
+		return upwd;
 	}
-	public void setUpassword(String upassword) {
-		this.upassword = upassword;
+	public void setUpwd(String upwd) {
+		this.upwd = upwd;
 	}
 	public String getUsex() {
 		return usex;
@@ -63,11 +85,8 @@ public class Users {
 	
 	@Override
 	public String toString() {
-		return "Users [uname=" + uname + ", upassword=" + upassword + ", usex=" + usex + ", uage=" + uage + ", uphone="
-				+ uphone + ", uemail=" + uemail + ", uaddr=" + uaddr + ", headimage=" + headimage + "]";
+		return "Users [u_id=" + u_id + ", uname=" + uname + ", upwd=" + upwd + ", usex=" + usex + ", uage="
+				+ uage + ", uphone=" + uphone + ", uemail=" + uemail + ", uaddr=" + uaddr + ", headimage=" + headimage
+				+ "]";
 	}
-	
-
-	
-
 }

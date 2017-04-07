@@ -1,5 +1,6 @@
 package com.yc.resta.service.impl;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,11 @@ public class UserServiceImpl implements UserService {
 		//user.setPassword(Encrypt.md5AndSha(user.getPassword()));
 		System.out.println("用户进行登录操作==》"+user);
 		return userMapper.loginUser(user);
+	}
+	@Override
+	public Users register(Users user) {
+		LogManager.getLogger().debug("用户进行注册操作===>"+user);
+		return userMapper.addUser(user);
 	}
 	
 }

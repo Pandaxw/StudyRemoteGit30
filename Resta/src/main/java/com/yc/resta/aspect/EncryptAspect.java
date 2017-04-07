@@ -18,6 +18,6 @@ public class EncryptAspect {
 	public void beforeMethod(JoinPoint jpoint){
 		Users users=(Users) jpoint.getArgs()[0];
 		LogManager.getLogger().debug("对密码加密前==》"+users);
-		users.setUpassword(Encrypt.md5AndSha(users.getUpassword())); 
+		users.setUpwd((Encrypt.md5AndSha(users.getUpwd()))); 
 	}
 }
