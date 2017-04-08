@@ -1,5 +1,5 @@
 drop table users;
-drop sequence seq_uid
+drop sequence seq_u_id;
 --用户表 (注册用)
 create table users(
 	u_id int primary key,
@@ -16,7 +16,7 @@ create table users(
 create sequence seq_u_id
 start with 100001 
 increment by 1 ;
-
+select * from users;
 insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimage) values(seq_u_id.nextval,'李四','6f9b0a55df8ac28564cb9f63a10be8af6ab3f7c2','592176245@qq.com','小李','18397152360','男','衡阳','');
 --管理员表
 create table administrator(

@@ -15,9 +15,4 @@ $('#btnLogin').linkbutton({
     onClick: function(){
     	$("#loginForm").submit();//表单提交
     }
-<<<<<<< HEAD
 }); 
-=======
-}); 
-
->>>>>>> branch 'master' of ssh://git@github.com/Pandaxw/StudyRemoteGit30

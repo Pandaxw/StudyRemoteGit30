@@ -103,7 +103,7 @@
 												target="_blank">登陆</a></li>
 											<li><a rel="nofollow" href="page/register.jsp"
 												target="_blank">注册</a></li>
-											<li><a><img src="images/${loginUser.uheadimg }"
+											<li><a><img src="images/${loginUser.uheadimage }"
 													id="pic" width="80" height="50"></a></li>
 											<li><div class="div">
 													<ul>
@@ -115,11 +115,6 @@
 													</ul>
 												</div></li>
 										</ul>
-									</div>
-								</div>
-								<div class="search">
-									<div class="search-inner">
-										<a href="#"><i class="mdi mdi-magnify"></i></a>
 									</div>
 								</div>
 							</div>

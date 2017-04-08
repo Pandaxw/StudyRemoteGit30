@@ -22,7 +22,7 @@
 					value="" />
 			</p>
 			<p>
-				<input name="upwd" type="password" placeholder="输入用户姓名" required="required"
+				<input name="upwd" type="password" placeholder="输入密码" required="required"
 					value="" />
 			</p>
 			<p>
