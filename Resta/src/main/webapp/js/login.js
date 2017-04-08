@@ -16,4 +16,3 @@ $('#btnLogin').linkbutton({
     	$("#loginForm").submit();//表单提交
     }
 }); 
-

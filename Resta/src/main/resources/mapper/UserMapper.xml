@@ -3,12 +3,14 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.resta.mapper.UserMapper">
-	<select id="findUser" parameterType="Users" resultType="Users">
+	<select id="loginUser" parameterType="Users" resultType="Users">
 		select * from users where u_id=#{u_id} and upwd=#{upwd}
 	</select>
 	
 	<insert id="addUser" parameterType="Users" >
 		insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimage) 
 		values(seq_u_id.nextval,#{uname},#{upwd},#{umail},#{unickname},#{uphone},#{usex},#{uaddr},#{uheadimage})
+
 	</insert>
+
 </mapper>

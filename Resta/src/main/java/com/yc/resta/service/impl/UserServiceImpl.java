@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public Users login(Users user) {
 		LogManager.getLogger().debug("用户进行登录操作===>"+user);
-		return userMapper.findUser(user);
+		return userMapper.loginUser(user);
 	}
 
 	@Override

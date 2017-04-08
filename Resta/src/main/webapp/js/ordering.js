@@ -77,7 +77,7 @@ function showBuyCar(){
 //添加至购物车
 function addBuyCar(gid){
 	alert(gid);
-		$.post("buyCar/"+gid,u_id,function(data){
+		$.post("buyCar/"+gid,function(data){
 			if(data==true){
 				alert('已添加至购物车！！！');
 				

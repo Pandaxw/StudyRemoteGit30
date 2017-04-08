@@ -5,6 +5,7 @@ public class Users {
 	private Integer u_id;
 	private String uname;
 	private String upwd;
+	private String uage;
 	private String umail;
 	private String unickname;
 	private String uphone;
@@ -15,6 +16,7 @@ public class Users {
 	public Users() {
 	}
 	
+
 	public Users(Integer u_id, String uname, String upwd, String umail, String unickname, String uphone, String usex,
 			String uaddr, String uheadimage) {
 		this.u_id = u_id;
@@ -27,6 +29,9 @@ public class Users {
 		this.uaddr = uaddr;
 		this.uheadimage = uheadimage;
 	}
+
+	
+
 	public Integer getU_id() {
 		return u_id;
 	}
@@ -83,14 +88,9 @@ public class Users {
 	}
 	@Override
 	public String toString() {
-		return "Users [u_id=" + u_id + ", uname=" + uname + ", upwd=" + upwd + ", umail=" + umail + ", unickname="
-				+ unickname + ", uphone=" + uphone + ", usex=" + usex + ", uaddr=" + uaddr + ", uheadimage="
-				+ uheadimage + "]";
+		return "Users [u_id=" + u_id + ", uname=" + uname + ", upwd=" + upwd + ", usex=" + usex + ", uage="
+				+ uage + ", uphone=" + uphone + ", uemail=" + umail + ", uaddr=" + uaddr + ", uheadimage=" + uheadimage
+				+ "]";
+
 	}
-	
-
-	
-
-	
-
 }
