@@ -11,6 +11,22 @@ public class Users {
 	private String usex;
 	private String uaddr;
 	private String uheadimage;
+	
+	public Users() {
+	}
+	
+	public Users(Integer u_id, String uname, String upwd, String umail, String unickname, String uphone, String usex,
+			String uaddr, String uheadimage) {
+		this.u_id = u_id;
+		this.uname = uname;
+		this.upwd = upwd;
+		this.umail = umail;
+		this.unickname = unickname;
+		this.uphone = uphone;
+		this.usex = usex;
+		this.uaddr = uaddr;
+		this.uheadimage = uheadimage;
+	}
 	public Integer getU_id() {
 		return u_id;
 	}

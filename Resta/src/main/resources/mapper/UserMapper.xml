@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="addUser" parameterType="Users" >
-		insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimg) 
-		values(seq_u_id.nextval,#{uname},#{upwd},#{umail},#{unickname},#{uphone},#{usex},#{uaddr},#{uheadimg})
+		insert into users(u_id,uname,upwd,umail,unickname,uphone,usex,uaddr,uheadimage) 
+		values(seq_u_id.nextval,#{uname},#{upwd},#{umail},#{unickname},#{uphone},#{usex},#{uaddr},#{uheadimage})
 	</insert>
 </mapper>

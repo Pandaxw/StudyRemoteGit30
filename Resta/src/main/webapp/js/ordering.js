@@ -1,3 +1,4 @@
+
 //异步加载美食图片以及名称
 function listGreens(gtype){
 	
@@ -43,7 +44,7 @@ function showBuyCar(){
 		var buyCarStr = "";
 
 		for (var i = 0; i < data.length; i++) {
-			alert(data[i].bgid);
+			alert(JSON.stringify(data));
 			/*buyCarStr+=
 				'<div class="row">'	
 				+'<div class="col-md-6 col-sm-6 col-xs-12">'
@@ -76,7 +77,7 @@ function showBuyCar(){
 //添加至购物车
 function addBuyCar(gid){
 	alert(gid);
-		$.post("buyCar/"+gid,function(data){
+		$.post("buyCar/"+gid,u_id,function(data){
 			if(data==true){
 				alert('已添加至购物车！！！');
 				

@@ -21,25 +21,26 @@ public class UserHandler {
 	@Autowired
 	private UserService userService;
 	
+	@SuppressWarnings("unused")
 	@RequestMapping("login")
 	public String login(Users user,HttpServletRequest request){
 		System.out.println("请求对象user==>"+user);
 		user=userService.login(user);
+		int u_id =user.getU_id();
 		if(user == null){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE,"用户名或密码错误!!!!");
 			return "/page/login.jsp";
 		}else{
 			request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
-			System.out.println(user.getUheadimage());
+			System.out.println(u_id);
 			return "redirect:../index.html";
 		}
 	}
 	
 	@RequestMapping("register")
 	public String register(Users user,HttpServletRequest request){
-		System.out.println("请求对象user==>"+user);
-		user=userService.register(user);
-		if(user == null){
+		boolean jugle = userService.register(user);
+		if(!jugle){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE,"注册失败!!!!");
 			return "/page/register.jsp";
 		}else{

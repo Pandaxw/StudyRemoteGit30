@@ -35,7 +35,7 @@ public class BuyCar {
 	}
 	@Override
 	public String toString() {
-		return "BuyCar [bid=" + bid + ", bgid=" + bgid + ", bonum=" + bonum + ", greens=" + greens + "]";
+		return "\nBuyCar [bid=" + bid + ", bgid=" + bgid + ", bonum=" + bonum + ", greens=" + greens + "]";
 	}
 	
 	

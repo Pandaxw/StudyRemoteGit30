@@ -24,7 +24,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap> 
 	
 	<select id="showBuyCar3"  resultMap="BuyCarMap">
-	 select b.*,g.* from buyCar b join greens g  on bgid = gid 
+		select b.*,g.* from buyCar b join greens g  on bgid = gid 
 	</select>
 
 </mapper>

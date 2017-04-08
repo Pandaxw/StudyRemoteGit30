@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.yc.resta.entity.BuyCar;
 import com.yc.resta.entity.Greens;
 import com.yc.resta.service.BuyCarService;
+import com.yc.resta.util.ServletUtil;
 
 
 @Controller("buyCarHandler")
@@ -66,8 +67,7 @@ public class BuyCarHandler {
 				}*/
 				
 				
-		
-		
+	
 		
 		
 }
